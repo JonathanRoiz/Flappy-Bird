@@ -23,7 +23,7 @@
       var canvas = document.getElementById("myCanvas");
       var ctx = canvas.getContext("2d");
       var birdRadius = 20;
-      var x = canvas.width/2;
+      var x = canvas.width/4;
       var y = canvas.height-30;
       
       //canvas.width = window.innerWidth;
@@ -32,7 +32,7 @@
       canvas.height = window.innerHeight/1.005;
       
       function drawBird() {
-        ctx.moveTo(100,300);
+        ctx.moveTo(x,y);
         ctx.beginPath();
         ctx.arc(x, y, birdRadius, 0, Math.PI*2);
         ctx.fillStyle = "#FFFF00";
