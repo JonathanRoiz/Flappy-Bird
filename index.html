@@ -18,7 +18,7 @@
     </style>
   </head>
   <body>
-    <canvas id="myCanvas" width=100% height=100% style="border:1px solid #00bfff" style="overflow:hidden"> ></canvas>
+    <canvas id="myCanvas" width=100% height=100% style="border:1px solid #00bfff"> ></canvas>
     <script language = "javascript">
       var canvas = document.getElementById("myCanvas");
       var ctx = canvas.getContext("2d");
@@ -28,8 +28,8 @@
       
       //canvas.width = window.innerWidth;
       //canvas.height = window.innerHeight;
-      canvas.width  = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width  = window.innerWidth/1.005;
+      canvas.height = window.innerHeight1.005;
       
       function drawBird() {
         ctx.beginPath();
