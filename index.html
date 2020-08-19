@@ -6,12 +6,6 @@
     <style>
       canvas {background-color: powderblue;}
       canvas backgroundColor: 'blue';
-      margin: 0;
-      padding: 0;
-      html, body, canvas {
-        margin: 0;
-        padding: 0;
-      }
     </style>
   </head>
   <body>
@@ -25,8 +19,8 @@
       
       //canvas.width = window.innerWidth;
       //canvas.height = window.innerHeight;
-      canvas.width  = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width  = window.innerWidth/1.05;
+      canvas.height = window.innerHeight/1.05;
       
       function drawBird() {
         ctx.beginPath();
