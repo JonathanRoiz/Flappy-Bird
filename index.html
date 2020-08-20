@@ -35,7 +35,6 @@
       function keyDownHandler(e) {
         if(e.keyCode == 32) {
             spacePressed = true;
-            //alert("Success")
         }
       }
       function keyUpHandler(e) {
@@ -53,27 +52,23 @@
         ctx.closePath();
       }
       
+      
+      
       setInterval(function(){
-        y += 3
+        if (x <= 0) {
+          
+        } else {
+          y += 7
+        }
       }, 50);
       
       setInterval(function(){ 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawBird();
         if (spacePressed) {
-          y -= 6;
+          y -= 14;
         }
       }, 50);
-      
-      //function draw() {
-        //ctx.clearRect(0, 0, canvas.width, canvas.height);
-        //drawBird();
-        //if (spacePressed) {
-          //move += 3;
-          //alert(move)
-        //}
-      //}
-      //draw();
     </script>
   </body>
 </html>
