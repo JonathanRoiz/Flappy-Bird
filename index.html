@@ -97,8 +97,8 @@
           rect3.y + rect3.height > rect2.y) {
           obsIncrement = 0;
           fallSpeed = 0;
-          randomHeight = Math.round(Math.random() * 6) + 2
-          randomHeight2 = Math.round(Math.random() * 6) + 2
+          randomHeight = Math.round(Math.random() * 5) + 2
+          randomHeight2 = Math.round(Math.random() * 5) + 2
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsX = canvas.width;
@@ -112,8 +112,8 @@
         drawObstacle();
         obsX += obsIncrement;
         if (obsX < -70) {
-          randomHeight = Math.round(Math.random() * 6) + 2
-          randomHeight2 = Math.round(Math.random() * 6) + 2
+          randomHeight = Math.round(Math.random() * 5) + 2
+          randomHeight2 = Math.round(Math.random() * 5) + 2
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsX = canvas.width;
