@@ -55,9 +55,6 @@
       
       
       setInterval(function(){
-        if (y >= 0) {
-          
-        } else {
           y += 4
         }
       }, 25);
@@ -66,7 +63,7 @@
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawBird();
         if (spacePressed) {
-          if (y <= 0) {
+          if (y <= 20) {
             
           } else {
             y -= 8
