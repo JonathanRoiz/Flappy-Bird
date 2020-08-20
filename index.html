@@ -56,7 +56,9 @@
       
       
       setInterval(function(){
-          y += 4
+          if (y <= canvas.height - 20) {
+            y += 4
+          }
       }, 25);
       
       setInterval(function(){ 
