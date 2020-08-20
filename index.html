@@ -79,8 +79,6 @@
         var rect1 = {x: obsX, y: obsY-obsHeight, width: obsWidth, height: obsHeight}
         var rect2 = {x: x, y: y, width: 21, height: 21}
         var rect3 = {x: obsX, y: 0, width: obsWidth, height: obsHeight2}
-        randomHeight = Math.round(Math.random() * 6) + 2
-        randomHeight2 = Math.round(Math.random() * 6) + 2
         obsHeight = canvas.height/randomHeight;
         obsHeight2 = canvas.height/randomHeight2;
         if (rect1.x < rect2.x + rect2.width &&
@@ -91,12 +89,16 @@
           obsIncrement = 0;
           fallSpeed = 0;
           obsX = canvas.width;
+          randomHeight = Math.round(Math.random() * 6) + 2
+          randomHeight2 = Math.round(Math.random() * 6) + 2
         } else if (rect3.x < rect2.x + rect2.width &&
           rect3.x + rect3.width > rect2.x &&
           rect3.y < rect2.y + rect2.height &&
           rect3.y + rect3.height > rect2.y) {
           obsIncrement = 0;
           fallSpeed = 0;
+          randomHeight = Math.round(Math.random() * 6) + 2
+          randomHeight2 = Math.round(Math.random() * 6) + 2
           obsX = canvas.width;
         } else {
           obsIncrement = -4;
@@ -108,6 +110,8 @@
         drawObstacle();
         obsX += obsIncrement;
         if (obsX < -70) {
+          randomHeight = Math.round(Math.random() * 6) + 2
+          randomHeight2 = Math.round(Math.random() * 6) + 2
           obsX = canvas.width;
         }
         if (spacePressed) {
