@@ -33,8 +33,8 @@
       var obsX = canvas.width;
       var obsY = canvas.height;
       var obsWidth = 50;
-      var obsHeight = 100;
-      var obsHeight2 = 100;
+      var obsHeight = 75;
+      var obsHeight2 = 75;
       var obsIncrement = -2;
       var fallSpeed = 4;
       
@@ -63,8 +63,8 @@
       
       function drawObstacle() {
         ctx.fillStyle = "	#008000";
-        ctx.fillRect(obsX,obsY-100,obsWidth,obsHeight);
-        ctx.fillRect(obsX,0,50,100);
+        ctx.fillRect(obsX,obsY-obsHeight,obsWidth,obsHeight);
+        ctx.fillRect(obsX,0,obsWidth,obsHeight2);
       }
       
       setInterval(function(){
@@ -74,7 +74,7 @@
       }, 25);
       
       setInterval(function(){ 
-        var rect1 = {x: obsX, y: obsY-100, width: obsWidth, height: obsHeight}
+        var rect1 = {x: obsX, y: obsY-obsHeight, width: obsWidth, height: obsHeight}
         var rect2 = {x: x, y: y, width: 21, height: 21}
         var rect3 = {x: obsX, y: 0, width: obsWidth, height: obsHeight2}
         if (rect1.x < rect2.x + rect2.width &&
@@ -84,10 +84,19 @@
           // collision detected!
           obsIncrement = 0;
           fallSpeed = 0;
+          obsX = canvas.width;
+        } else if (rect3.x < rect2.x + rect2.width &&
+          rect3.x + rect3.width > rect2.x &&
+          rect3.y < rect2.y + rect2.height &&
+          rect3.y + rect3.height > rect2.y) {
+          obsIncrement = 0;
+          fallSpeed = 0;
+          obsX = canvas.width;
         } else {
           obsIncrement = -2;
           fallSpeed = 4;
         }
+        
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawBird();
         drawObstacle();
