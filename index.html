@@ -34,7 +34,7 @@
       var obsY = canvas.height;
       var obsWidth = 50;
       var obsHeight = canvas.height/3;
-      var obsHeight2 = canvas.height/3;
+      var obsHeight2 = canvas.height/2;
       var obsIncrement = -4;
       var fallSpeed = 4;
       
@@ -101,6 +101,9 @@
         drawBird();
         drawObstacle();
         obsX += obsIncrement;
+        if (obsX < 0) then {
+          obsX = canvas.width;
+        }
         if (spacePressed) {
           if (y <= 20) {
             
