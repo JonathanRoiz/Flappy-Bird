@@ -31,6 +31,7 @@
       var y = canvas.height/2;
       
       var obsX = canvas.width;
+      var obsX2 = canvas.width;
       var obsY = canvas.height;
       var randomHeight = (Math.random() * 2) + 2
       var randomHeight2 = (Math.random() * 2) + 2
@@ -67,6 +68,10 @@
         ctx.fillStyle = "	#008000";
         ctx.fillRect(obsX,obsY-obsHeight,obsWidth,obsHeight);
         ctx.fillRect(obsX,0,obsWidth,obsHeight2);
+      }
+      funcion drawObstacle2() {
+        ctx.fillRect(obsX2,obsY-obsHeight,obsWidth,obsHeight);
+        ctx.fillRect(obsX2+(canvas.Width/2),0,obsWidth,obsHeight2); //Changed Code
       }
       
       setInterval(function(){
@@ -110,6 +115,7 @@
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawBird();
         drawObstacle();
+        drawObstacle2();
         obsX += obsIncrement;
         if (obsX < -70) {
           randomHeight = (Math.random() * 2) + 2
