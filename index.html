@@ -98,6 +98,10 @@
         var rect3 = {x: obsX, y: 0, width: obsWidth, height: obsHeight2}
         var rect4 = {x: obsX2, y: obsY-obsHeight3, width: obsWidth, height: obsHeight3}
         var rect5 = {x: obsX2, y: 0, width: obsWidth, height: obsHeight4}
+        drawBird();
+        drawObstacle();
+        drawObstacle2();
+        drawText();
         randomHeight = (Math.random()/2) + 2.12
         randomHeight2 = (Math.random()/2) + 2.12
         if (rect1.x < rect2.x + rect2.width &&
@@ -175,10 +179,6 @@
         }
         
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        drawBird();
-        drawObstacle();
-        drawObstacle2();
-        drawText();
         obsX += obsIncrement;
         obsX2 += obsIncrement;
         if (obsX < -40) {
