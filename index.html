@@ -23,11 +23,13 @@
       var ctx = canvas.getContext("2d");
       var birdRadius = 20;
       var spacePressed = false;
+      var score = 0;
       
       function drawText() {
-        ctx.font = "60px Arial"; // new code
+      	ctx.fillStyle = "blue";
+        ctx.font = "70px Arial"; // new code
         ctx.textAlign = "center";
-        ctx.fillText("Score", canvas.width/2,0);
+        ctx.fillText(score, canvas.width/2,70);
       }
       
       canvas.width  = window.innerWidth/1.005;
@@ -48,7 +50,7 @@
       var obsHeight2 = canvas.height/randomHeight2;
       var obsHeight3 = canvas.height/randomHeight3;
       var obsHeight4 = canvas.height/randomHeight4;
-      var obsIncrement = -4;
+      var obsIncrement = -6;
       var fallSpeed = 4;
       
       document.addEventListener("keydown", keyDownHandler, false);
@@ -148,7 +150,7 @@
           obsX = canvas.width;
           obsX2 = canvas.width * 1.5;
         } else {
-          obsIncrement = -4;
+          obsIncrement = -6;
           fallSpeed = 4;
         }
         
@@ -165,6 +167,7 @@
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsX = canvas.width;
+          score += 1;
         }
         if (obsX2 < -70) {
           randomHeight3 = (Math.random() * 2) + 2.5
@@ -172,6 +175,7 @@
           obsHeight3 = canvas.height/randomHeight3;
           obsHeight4 = canvas.height/randomHeight4;
           obsX2 = canvas.width;
+          score += 1;
         }
             
         if (spacePressed) {
