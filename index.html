@@ -99,6 +99,11 @@
         var rect4 = {x: obsX2, y: obsY-obsHeight3, width: obsWidth, height: obsHeight3}
         var rect5 = {x: obsX2, y: 0, width: obsWidth, height: obsHeight4}
 
+        drawBird();
+        drawObstacle();
+        drawObstacle2();
+        drawText();
+        
         if (rect1.x < rect2.x + rect2.width &&
           rect1.x + rect1.width > rect2.x &&
           rect1.y < rect2.y + rect2.height &&
@@ -198,10 +203,6 @@
           obsX2 = canvas.width;
         }
         
-        drawBird();
-        drawObstacle();
-        drawObstacle2();
-        drawText();
             
         if (spacePressed) {
           if (y <= 20) {
