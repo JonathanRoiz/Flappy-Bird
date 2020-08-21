@@ -17,7 +17,6 @@
     </style>
   </head>
   <body>
-    <center><h1 id="Score" width=30% height=15%>Score</h1></center>
     <canvas id="myCanvas" width=100% height=100% style="border:1px solid #00bfff"> ></canvas>
     <script language = "javascript">
       var canvas = document.getElementById("myCanvas");
@@ -25,9 +24,11 @@
       var birdRadius = 20;
       var spacePressed = false;
       
-      ctx.font = "30px Arial"; // new code
-      ctx.textAlign = "center";
-      ctx.fillText("Score", canvas.width/2,canvas.height/3);
+      function drawText() {
+        ctx.font = "30px Arial"; // new code
+        ctx.textAlign = "center";
+        ctx.fillText("Score", canvas.width/2,canvas.height/3);
+      }
       
       canvas.width  = window.innerWidth/1.005;
       canvas.height = window.innerHeight/1.005;
@@ -155,6 +156,7 @@
         drawBird();
         drawObstacle();
         drawObstacle2();
+        drawText();
         obsX += obsIncrement;
         obsX2 += obsIncrement;
         if (obsX < -70) {
