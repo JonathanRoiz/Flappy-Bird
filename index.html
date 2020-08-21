@@ -33,11 +33,15 @@
       var obsX = canvas.width;
       var obsX2 = canvas.width*1.5;
       var obsY = canvas.height;
-      var randomHeight = (Math.random() * 2) + 2
-      var randomHeight2 = (Math.random() * 2) + 2
+      var randomHeight = (Math.random() * 2) + 2.5
+      var randomHeight2 = (Math.random() * 2) + 2.5
+      var randomHeight3 = (Math.random() * 2) + 2.5
+      var randomHeight4 = (Math.random() * 2) + 2.5
       var obsWidth = 50;
       var obsHeight = canvas.height/randomHeight;
       var obsHeight2 = canvas.height/randomHeight2;
+      var obsHeight3 = canvas.height/randomHeight3;
+      var obsHeight4 = canvas.height/randomHeight4;
       var obsIncrement = -4;
       var fallSpeed = 4;
       
@@ -70,8 +74,8 @@
         ctx.fillRect(obsX,0,obsWidth,obsHeight2);
       }
       function drawObstacle2() {
-        ctx.fillRect(obsX2,obsY-obsHeight,obsWidth,obsHeight);
-        ctx.fillRect(obsX2,0,obsWidth,obsHeight2); //Changed Code
+        ctx.fillRect(obsX2,obsY-obsHeight3,obsWidth,obsHeight3);
+        ctx.fillRect(obsX2,0,obsWidth,obsHeight4); //Changed Code
       }
       
       setInterval(function(){
@@ -128,10 +132,10 @@
           obsX = canvas.width;
         }
         if (obsX2 < -70) {
-          randomHeight = (Math.random() * 2) + 2.5
-          randomHeight2 = (Math.random() * 2) + 2.5
-          obsHeight = canvas.height/randomHeight;
-          obsHeight2 = canvas.height/randomHeight2;
+          randomHeight3 = (Math.random() * 2) + 2.5
+          randomHeight4 = (Math.random() * 2) + 2.5
+          obsHeight3 = canvas.height/randomHeight3;
+          obsHeight4 = canvas.height/randomHeight4;
           obsX2 = canvas.width;
         }
             
