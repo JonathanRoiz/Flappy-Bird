@@ -31,7 +31,7 @@
       var y = canvas.height/2;
       
       var obsX = canvas.width;
-      var obsX2 = canvas.width;
+      var obsX2 = canvas.width*1.5;
       var obsY = canvas.height;
       var randomHeight = (Math.random() * 2) + 2
       var randomHeight2 = (Math.random() * 2) + 2
@@ -71,7 +71,7 @@
       }
       function drawObstacle2() {
         ctx.fillRect(obsX2,obsY-obsHeight,obsWidth,obsHeight);
-        ctx.fillRect(obsX2+(canvas.Width/2),0,obsWidth,obsHeight2); //Changed Code
+        ctx.fillRect(obsX2,0,obsWidth,obsHeight2); //Changed Code
       }
       
       setInterval(function(){
