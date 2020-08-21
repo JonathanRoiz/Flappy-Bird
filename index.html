@@ -173,12 +173,12 @@
           fallSpeed = 4;
         }
         
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawBird();
         drawObstacle();
         drawObstacle2();
         drawText();
         
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
         obsX += obsIncrement;
         obsX2 += obsIncrement;
         if (obsX < x) {
