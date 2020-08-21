@@ -176,10 +176,10 @@
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         obsX += obsIncrement;
         obsX2 += obsIncrement;
-        if (obsX < -40) {
+        if (obsX == x) {
           score += 1;
         }
-        if (obsX2 < -40) {
+        if (obsX2 == x) {
           score += 1;
         }
 
