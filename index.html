@@ -173,15 +173,13 @@
           fallSpeed = 4;
         }
         
-        drawBird();
-        drawObstacle();
-        drawObstacle2();
-        drawText();
-        
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         obsX += obsIncrement;
         obsX2 += obsIncrement;
         if (obsX < -40) {
+          score += 1;
+        }
+        if (obsX2 < -40) {
           score += 1;
         }
 
@@ -200,6 +198,11 @@
           obsX2 = canvas.width;
           score += 1;
         }
+        
+        drawBird();
+        drawObstacle();
+        drawObstacle2();
+        drawText();
             
         if (spacePressed) {
           if (y <= 20) {
