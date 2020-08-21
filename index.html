@@ -93,11 +93,6 @@
       }, 25);
       
       setInterval(function(){ 
-        
-        drawBird();
-        drawObstacle();
-        drawObstacle2();
-        drawText();
         var rect1 = {x: obsX, y: obsY-obsHeight, width: obsWidth, height: obsHeight}
         var rect2 = {x: x, y: y, width: 21, height: 21}
         var rect3 = {x: obsX, y: 0, width: obsWidth, height: obsHeight2}
@@ -177,6 +172,11 @@
           obsIncrement = -6;
           fallSpeed = 4;
         }
+        
+        drawBird();
+        drawObstacle();
+        drawObstacle2();
+        drawText();
         
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         obsX += obsIncrement;
