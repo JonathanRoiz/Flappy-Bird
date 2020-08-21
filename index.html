@@ -129,7 +129,19 @@
           obsHeight2 = canvas.height/randomHeight2;
           obsX = canvas.width;
           obsX2 = canvas.width * 1.5;
-        } else {
+        } else if (rect5.x < rect2.x + rect2.width &&
+          rect5.x + rect5.width > rect2.x &&
+          rect5.y < rect2.y + rect2.height &&
+          rect5.y + rect5.height > rect2.y) {
+          obsIncrement = 0;
+          fallSpeed = 0;
+          randomHeight = (Math.random() * 2) + 2.5
+          randomHeight2 = (Math.random() * 2) + 2.5
+          obsHeight = canvas.height/randomHeight;
+          obsHeight2 = canvas.height/randomHeight2;
+          obsX = canvas.width;
+          obsX2 = canvas.width * 1.5;
+        } else
           obsIncrement = -4;
           fallSpeed = 4;
         }
