@@ -88,6 +88,8 @@
         var rect1 = {x: obsX, y: obsY-obsHeight, width: obsWidth, height: obsHeight}
         var rect2 = {x: x, y: y, width: 21, height: 21}
         var rect3 = {x: obsX, y: 0, width: obsWidth, height: obsHeight2}
+        var rect4 = {x: obsX2, y: 0, width: obsWidth, height: obsHeight}
+        var rect5 = {x: obsX2, y: 0, width: obsWidth, height: obsHeight2}
         randomHeight = (Math.random() * 2) + 2.5
         randomHeight2 = (Math.random() * 2) + 2.5
         if (rect1.x < rect2.x + rect2.width &&
@@ -107,6 +109,18 @@
           rect3.x + rect3.width > rect2.x &&
           rect3.y < rect2.y + rect2.height &&
           rect3.y + rect3.height > rect2.y) {
+          obsIncrement = 0;
+          fallSpeed = 0;
+          randomHeight = (Math.random() * 2) + 2.5
+          randomHeight2 = (Math.random() * 2) + 2.5
+          obsHeight = canvas.height/randomHeight;
+          obsHeight2 = canvas.height/randomHeight2;
+          obsX = canvas.width;
+          obsX2 = canvas.width * 1.5;
+        } else if (rect4.x < rect2.x + rect2.width &&
+          rect4.x + rect4.width > rect2.x &&
+          rect4.y < rect2.y + rect2.height &&
+          rect4.y + rect4.height > rect2.y) {
           obsIncrement = 0;
           fallSpeed = 0;
           randomHeight = (Math.random() * 2) + 2.5
