@@ -52,6 +52,7 @@
       var obsHeight4 = canvas.height/randomHeight4;
       var obsIncrement = -6;
       var fallSpeed = 4;
+      var randomOffset = 2.14
       
       document.addEventListener("keydown", keyDownHandler, false);
       document.addEventListener("keyup", keyUpHandler, false);
@@ -106,10 +107,10 @@
           // collision detected!
           obsIncrement = 0;
           fallSpeed = 0;
-          randomHeight = (Math.random()/2) + 2.135
-          randomHeight2 = (Math.random()/2) + 2.135
-          randomHeight3 = (Math.random()/2) + 2.135
-          randomHeight4 = (Math.random()/2) + 2.135
+          randomHeight = (Math.random()/2) + randomOffset
+          randomHeight2 = (Math.random()/2) + randomOffset
+          randomHeight3 = (Math.random()/2) + randomOffset
+          randomHeight4 = (Math.random()/2) + randomOffset
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsHeight3 = canvas.height/randomHeight3;
@@ -123,10 +124,10 @@
           rect3.y + rect3.height > rect2.y) {
           obsIncrement = 0;
           fallSpeed = 0;
-          randomHeight = (Math.random()/2) + 2.135
-          randomHeight2 = (Math.random()/2) + 2.135
-          randomHeight3 = (Math.random()/2) + 2.135
-          randomHeight4 = (Math.random()/2) + 2.135
+          randomHeight = (Math.random()/2) + randomOffset
+          randomHeight2 = (Math.random()/2) + randomOffset
+          randomHeight3 = (Math.random()/2) + randomOffset
+          randomHeight4 = (Math.random()/2) + randomOffset
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsHeight3 = canvas.height/randomHeight3;
@@ -140,10 +141,10 @@
           rect4.y + rect4.height > rect2.y) {
           obsIncrement = 0;
           fallSpeed = 0;
-          randomHeight = (Math.random()/2) + 2.135
-          randomHeight2 = (Math.random()/2) + 2.135
-          randomHeight3 = (Math.random()/2) + 2.135
-          randomHeight4 = (Math.random()/2) + 2.135
+          randomHeight = (Math.random()/2) + randomOffset
+          randomHeight2 = (Math.random()/2) + randomOffset
+          randomHeight3 = (Math.random()/2) + randomOffset
+          randomHeight4 = (Math.random()/2) + randomOffset
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsHeight3 = canvas.height/randomHeight3;
@@ -157,10 +158,10 @@
           rect5.y + rect5.height > rect2.y) {
           obsIncrement = 0;
           fallSpeed = 0;
-          randomHeight = (Math.random()/2) + 2.135
-          randomHeight2 = (Math.random()/2) + 2.135
-          randomHeight3 = (Math.random()/2) + 2.135
-          randomHeight4 = (Math.random()/2) + 2.135
+          randomHeight = (Math.random()/2) + randomOffset
+          randomHeight2 = (Math.random()/2) + randomOffset
+          randomHeight3 = (Math.random()/2) + randomOffset
+          randomHeight4 = (Math.random()/2) + randomOffset
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsHeight3 = canvas.height/randomHeight3;
@@ -189,15 +190,15 @@
         }
 
         if (obsX < -70) {
-          randomHeight = (Math.random()/2) + 2.135
-          randomHeight2 = (Math.random()/2) + 2.135
+          randomHeight = (Math.random()/2) + randomOffset
+          randomHeight2 = (Math.random()/2) + randomOffset
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsX = canvas.width;
         }
         if (obsX2 < -70) {
-          randomHeight3 = (Math.random()/2) + 2.13
-          randomHeight4 = (Math.random()/2) + 2.13
+          randomHeight3 = (Math.random()/2) + randomOffset
+          randomHeight4 = (Math.random()/2) + randomOffset
           obsHeight3 = canvas.height/randomHeight3;
           obsHeight4 = canvas.height/randomHeight4;
           obsX2 = canvas.width;
