@@ -41,10 +41,11 @@
       var obsX = canvas.width;
       var obsX2 = canvas.width*1.5;
       var obsY = canvas.height;
-      var randomHeight = (Math.random()/2) + 2.135
-      var randomHeight2 = (Math.random()/2) + 2.135
-      var randomHeight3 = (Math.random()/2) + 2.135
-      var randomHeight4 = (Math.random()/2) + 2.135
+      var randomOffset = 2.147
+      var randomHeight = (Math.random()/2) + randomOffset;
+      var randomHeight2 = (Math.random()/2) + randomOffset;
+      var randomHeight3 = (Math.random()/2) + randomOffset;
+      var randomHeight4 = (Math.random()/2) + randomOffset;
       var obsWidth = 50;
       var obsHeight = canvas.height/randomHeight;
       var obsHeight2 = canvas.height/randomHeight2;
@@ -52,7 +53,6 @@
       var obsHeight4 = canvas.height/randomHeight4;
       var obsIncrement = -6;
       var fallSpeed = 4;
-      var randomOffset = 2.145
       
       document.addEventListener("keydown", keyDownHandler, false);
       document.addEventListener("keyup", keyUpHandler, false);
