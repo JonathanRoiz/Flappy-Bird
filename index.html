@@ -107,10 +107,10 @@
           // collision detected!
           obsIncrement = -6;
           fallSpeed = 0;
-          randomHeight = (Math.random()/3) + randomOffset
-          randomHeight2 = (Math.random()/3) + randomOffset
-          randomHeight3 = (Math.random()/3) + randomOffset
-          randomHeight4 = (Math.random()/3) + randomOffset
+          randomHeight = (Math.random()/3) + randomOffset;
+          randomHeight2 = (Math.random()/3) + randomOffset;
+          randomHeight3 = (Math.random()/3) + randomOffset;
+          randomHeight4 = (Math.random()/3) + randomOffset;
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsHeight3 = canvas.height/randomHeight3;
@@ -126,10 +126,10 @@
           rect3.y + rect3.height > rect2.y) {
           obsIncrement = -6;
           fallSpeed = 0;
-          randomHeight = (Math.random()/3) + randomOffset
-          randomHeight2 = (Math.random()/3) + randomOffset
-          randomHeight3 = (Math.random()/3) + randomOffset
-          randomHeight4 = (Math.random()/3) + randomOffset
+          randomHeight = (Math.random()/3) + randomOffset;
+          randomHeight2 = (Math.random()/3) + randomOffset;
+          randomHeight3 = (Math.random()/3) + randomOffset;
+          randomHeight4 = (Math.random()/3) + randomOffset;
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsHeight3 = canvas.height/randomHeight3;
@@ -145,10 +145,10 @@
           rect4.y + rect4.height > rect2.y) {
           obsIncrement = -6;
           fallSpeed = 0;
-          randomHeight = (Math.random()/3) + randomOffset
-          randomHeight2 = (Math.random()/3) + randomOffset
-          randomHeight3 = (Math.random()/3) + randomOffset
-          randomHeight4 = (Math.random()/3) + randomOffset
+          randomHeight = (Math.random()/3) + randomOffset;
+          randomHeight2 = (Math.random()/3) + randomOffset;
+          randomHeight3 = (Math.random()/3) + randomOffset;
+          randomHeight4 = (Math.random()/3) + randomOffset;
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsHeight3 = canvas.height/randomHeight3;
@@ -164,10 +164,10 @@
           rect5.y + rect5.height > rect2.y) {
           obsIncrement = -6;
           fallSpeed = 0;
-          randomHeight = (Math.random()/3) + randomOffset
-          randomHeight2 = (Math.random()/3) + randomOffset
-          randomHeight3 = (Math.random()/3) + randomOffset
-          randomHeight4 = (Math.random()/3) + randomOffset
+          randomHeight = (Math.random()/3) + randomOffset;
+          randomHeight2 = (Math.random()/3) + randomOffset;
+          randomHeight3 = (Math.random()/3) + randomOffset;
+          randomHeight4 = (Math.random()/3) + randomOffset;
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsHeight3 = canvas.height/randomHeight3;
@@ -189,23 +189,23 @@
         
         obsX += obsIncrement;
         obsX2 += obsIncrement;
-        if ((obsX < x-42) && (obsX > x+obsIncrement)) {
+        if ((obsX < x-42) && (obsX > x-42+obsIncrement)) {
           score += 1;
         }
-        if ((obsX2 < x-42) && (obsX2 > x-48)) {
+        if ((obsX2 < x-42) && (obsX2 > x-42+obsIncrement)) {
           score += 1;
         }
 
         if (obsX < -70) {
-          randomHeight = (Math.random()/3) + randomOffset
-          randomHeight2 = (Math.random()/3) + randomOffset
+          randomHeight = (Math.random()/3) + randomOffset;
+          randomHeight2 = (Math.random()/3) + randomOffset;
           obsHeight = canvas.height/randomHeight;
           obsHeight2 = canvas.height/randomHeight2;
           obsX = canvas.width;
         }
         if (obsX2 < -70) {
-          randomHeight3 = (Math.random()/3) + randomOffset
-          randomHeight4 = (Math.random()/3) + randomOffset
+          randomHeight3 = (Math.random()/3) + randomOffset;
+          randomHeight4 = (Math.random()/3) + randomOffset;
           obsHeight3 = canvas.height/randomHeight3;
           obsHeight4 = canvas.height/randomHeight4;
           obsX2 = canvas.width;
