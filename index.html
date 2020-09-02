@@ -77,14 +77,22 @@
         }
       },25)
       
-      character = 50;
+      var character = [
+      	50,
+      	50
+      ];
+      var obstacle = [
+      	50,
+        100
+      ];
+      
       obsX = 50;
       obsY = 200;
       setInterval(function() {
       	ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle="#353839";
-        ctx.fillRect(x,y,character,character);
-        ctx.fillRect(100,100,obsX,obsY);
+        ctx.fillRect(x,y,character[0],character[1]);
+        ctx.fillRect(100,100,obstacle[0],obstacle[1]);
       },25)
       
     </script>
